@@ -22,11 +22,13 @@
 <br>---
 
 #### 검색결과
-<br>---
+<br>
+---
 ![image](https://user-images.githubusercontent.com/47339929/112755560-17efaf00-901c-11eb-84cc-175cd2307367.png)
 
 #### 저장결과
-<br>---
+<br>
+---
 ![image](https://user-images.githubusercontent.com/47339929/112755567-21791700-901c-11eb-97ad-099a43498114.png)
 
 
