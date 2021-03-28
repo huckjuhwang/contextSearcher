@@ -16,7 +16,9 @@
 ### 2021.12.05 (초기 인터페이스 구축)
 <hr>
 
-<center><img src="https://user-images.githubusercontent.com/47339929/112755509-f098e200-901b-11eb-9589-cac86bb203ca.png" width="700" height="250"></center>
+<center><img src="https://user-images.githubusercontent.com/47339929/112755509-f098e200-901b-11eb-9589-cac86bb203ca.png" width="1200" height="500"></center>
+
+
 ![image](https://user-images.githubusercontent.com/47339929/112755509-f098e200-901b-11eb-9589-cac86bb203ca.png) {: width="150" height="50"}
 
 - 형태소 입력 화면 페이지
