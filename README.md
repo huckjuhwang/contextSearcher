@@ -14,13 +14,13 @@
 <hr>
 
 ![image](https://user-images.githubusercontent.com/47339929/112755509-f098e200-901b-11eb-9589-cac86bb203ca.png)
-<br>---
+<br><hr>
 ![image](https://user-images.githubusercontent.com/47339929/112755525-fd1d3a80-901b-11eb-9d19-15d90b414f2b.png)
-<br>---
+<br><hr>
 ![image](https://user-images.githubusercontent.com/47339929/112755533-027a8500-901c-11eb-9966-a0eacde17ec6.png)
-<br>---
+<br><hr>
 ![image](https://user-images.githubusercontent.com/47339929/112755541-07d7cf80-901c-11eb-93c8-d47a6936d3e8.png)
-<br>---
+<br><hr>
 
 #### 검색결과
 <br>
