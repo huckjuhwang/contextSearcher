@@ -10,27 +10,27 @@
 인터페이스, 속도개선, DB테이블 구축
 
 
-### 2021.12.05 (목)
-----
-***
-___
+### 2021.12.05 (초기 인터페이스 구축)
+---
 ![image](https://user-images.githubusercontent.com/47339929/112755509-f098e200-901b-11eb-9589-cac86bb203ca.png)
-<br>
+<br>---
 ![image](https://user-images.githubusercontent.com/47339929/112755525-fd1d3a80-901b-11eb-9d19-15d90b414f2b.png)
+<br>---
 ![image](https://user-images.githubusercontent.com/47339929/112755533-027a8500-901c-11eb-9966-a0eacde17ec6.png)
+<br>---
 ![image](https://user-images.githubusercontent.com/47339929/112755541-07d7cf80-901c-11eb-93c8-d47a6936d3e8.png)
+<br>---
 
-
-검색결과
-
+#### 검색결과
+<br>---
 ![image](https://user-images.githubusercontent.com/47339929/112755560-17efaf00-901c-11eb-84cc-175cd2307367.png)
 
-저장결과
-
+#### 저장결과
+<br>---
 ![image](https://user-images.githubusercontent.com/47339929/112755567-21791700-901c-11eb-97ad-099a43498114.png)
 
 
-2021.09.15(화)
+### 2021.09.15
 속도개선
 ![image](https://user-images.githubusercontent.com/47339929/112755859-8aad5a00-901d-11eb-9fbe-513a8c0ac86b.png)
 
