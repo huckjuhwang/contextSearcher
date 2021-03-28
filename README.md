@@ -92,8 +92,9 @@ outputstream을 생성하기전에 JSP자체의 out객체를 비워주고 사용
 ## 2021.09.15.
 ### 1. 속도 개선 방안 
 
-<center><img src="https://user-images.githubusercontent.com/47339929/112755859-8aad5a00-901d-11eb-9fbe-513a8c0ac86b.png" width="1000" height="500"></center>
+<center><img src="https://user-images.githubusercontent.com/47339929/112755859-8aad5a00-901d-11eb-9fbe-513a8c0ac86b.png" width="700" height="300"></center>
 - 각 동작방식에 대해서 시간을 분석 하고, 가장 시간이 많이 소요되는 부분에서 속도를 하나하나 개선해 나감.<hr>
+
 #### 1.1 멀티쓰레드 사용<br><hr>
 <center><img src="https://user-images.githubusercontent.com/47339929/112757312-3d80b680-9024-11eb-80bd-45afc7743825.png" width="1000" height="500"></center>
 
