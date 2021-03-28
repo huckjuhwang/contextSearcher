@@ -72,13 +72,14 @@
 
 
 ### 2020.09.03
-1. 소스레벨 연동
+#### 1. 소스레벨 연동<br>
 - Before  : jar 파일을 사용하여 연동
 - After   : 첨부한 소스파일을 사용하여 소스 코드 레벨에서 연동되도록 수정.  
-2. 리팩토링 과정
+- 
+#### 2. 리팩토링 과정<br>
 검색기능을 하는 소스코드와 비슷한 기능을 하는 변수들의 이름을 같도록 변경
 
-3. java.lang.IllegalStateException: getOutputStream() has already been called for this respons 에러 처리
+#### 3. java.lang.IllegalStateException: getOutputStream() has already been called for this respons 에러 처리 <br>
 검색 결과를 저장하는 과정에서 에러가 발생하는 것을 확인
 JSP에서는 Servlet으로 변환시 내부적으로 out객체가 자동으로 생성되기 때문에 따로 out객체를 만들면 충돌이 일어나서 발생하는 이슈로 파악.
 
