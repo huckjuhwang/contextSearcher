@@ -95,35 +95,41 @@ outputstream을 생성하기전에 JSP자체의 out객체를 비워주고 사용
 <center><img src="https://user-images.githubusercontent.com/47339929/112755859-8aad5a00-901d-11eb-9fbe-513a8c0ac86b.png" width="800" height="350"></center>
 - 각 동작방식에 대해서 시간을 분석 하고, 가장 시간이 많이 소요되는 부분에서 속도를 하나하나 개선해 나감.<hr>
 
-#### 1.1 멀티쓰레드 사용<br><hr>
+#### 방안1. 같은 동작을하는 부분을 나눠서 멀티쓰레드 사용<br><hr>
 <center><img src="https://user-images.githubusercontent.com/47339929/112757312-3d80b680-9024-11eb-80bd-45afc7743825.png" width="800" height="350"></center>
 
 문화요소를 추출하는 과정에서 한개의 요소당 <b>0.01초</b>가 소요되었고, <br>
 만약 추출해야되는 문화요소 개수가 2000개라고 한다면 추출하는데에서 걸리는 시간만 <b> 20초이상</b>의 시간을 잡아먹는 상황이였습니다 <br>
 이 파트에서 멀티쓰레드를 사용하여 300단위 당 쓰레드1개를 생성하여 각 쓰레드마다 300개씩 처리하도록 하여 시스템 속도를 향상시켰습니다.<hr>
-#### 1.2 트리거 사용 <br><hr>
+#### 방안2. 비효율적으로 동작하는 sql을 트리거 사용하여 관리 <br><hr>
 <center><img src="https://user-images.githubusercontent.com/47339929/112757351-79b41700-9024-11eb-8fcd-020748313e02.png" width="800" height="350"></center>
 sql쿼리문을 분석하던 중 테이블의 크기가 매우큰데 전체 튜플을 카운트하는 쿼리문이 있었습니다.<br>
 해당 테이블은 1천만개가 넘는 데이터를 가지고있었기 때문에 매우 비효율적으로 동작을하고 있는 것으로 파악하였고
 #### 별도의 테이블개수를 저장하는 테이블을 만들고 트리거를 사용하여 지속적으로 업데이트 되도록 구성하였습니다.
 <br><hr>
 
-#### 1.3 멀티쓰레드 사용<hr>
+#### 방안3. 별도의 동작을 하는 각 기능들을 병렬처리 <hr>
 <center><img src="https://user-images.githubusercontent.com/47339929/112757359-83d61580-9024-11eb-8901-50934c76f0f2.png" width="800" height="350"></center>
 서로 영향을 받지않는 문화요소 후보 가중치계산 부분과 용례문장 생성 부분을 병렬처리하여 속도를 개선
 
 
 ## 속도개선 전과 이후 비교
 
+
+### 한국어
+
 ### 중국어
 ![image](https://user-images.githubusercontent.com/47339929/112798475-e6bcc080-90a7-11eb-85b4-e6bd00b229c3.png)
-
-
 ![image](https://user-images.githubusercontent.com/47339929/112798509-f1775580-90a7-11eb-94a7-0a9ab4f9af86.png)
-![image](https://user-images.githubusercontent.com/47339929/112798532-f805cd00-90a7-11eb-8af0-312484682bef.png)
+![image](https://user-images.githubusercontent.com/47339929/112798532-f805cd00-90a7-11eb-8af0-312484682bef.png) 
+<hr>
 
+### 일본어
+![image](https://user-images.githubusercontent.com/47339929/112798982-b32e6600-90a8-11eb-8712-abee41b11f07.png)
+![image](https://user-images.githubusercontent.com/47339929/112799015-c0e3eb80-90a8-11eb-8311-7578be55d011.png)
+![image](https://user-images.githubusercontent.com/47339929/112799045-c93c2680-90a8-11eb-8918-541793067cb4.png)
+<hr><br>
 
-<br><hr>
 ## 2020.01.04
 
 #### 1. 순위 가운데 정렬
