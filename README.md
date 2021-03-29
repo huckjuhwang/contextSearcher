@@ -115,6 +115,14 @@ sql쿼리문을 분석하던 중 테이블의 크기가 매우큰데 전체 튜�
 
 ## 속도개선 전과 이후 비교
 
+### 중국어
+![image](https://user-images.githubusercontent.com/47339929/112798475-e6bcc080-90a7-11eb-85b4-e6bd00b229c3.png)
+
+
+![image](https://user-images.githubusercontent.com/47339929/112798509-f1775580-90a7-11eb-94a7-0a9ab4f9af86.png)
+![image](https://user-images.githubusercontent.com/47339929/112798532-f805cd00-90a7-11eb-8af0-312484682bef.png)
+
+
 <br><hr>
 ## 2020.01.04
 
