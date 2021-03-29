@@ -38,8 +38,10 @@
 다시말하면, 1차문맥과 동일한 문장에서 공기한 형태소가 질의 형태소의 2차문맥이된다.<br>
 
 <hr>
+
 ### 검색결과<hr>
 <center><img src="https://user-images.githubusercontent.com/47339929/112755560-17efaf00-901c-11eb-84cc-175cd2307367.png"></center>
+<hr>
 
 ### 저장결과<hr>
 ![image](https://user-images.githubusercontent.com/47339929/112755567-21791700-901c-11eb-97ad-099a43498114.png)
