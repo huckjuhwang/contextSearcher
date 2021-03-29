@@ -15,11 +15,13 @@
 
 ### 2021.12.05 (초기 인터페이스 구축)
 <hr>
-<center><img src="https://user-images.githubusercontent.com/47339929/112755509-f098e200-901b-11eb-9589-cac86bb203ca.png" width="650" height="290"></center>
+<center><img src="https://user-images.githubusercontent.com/47339929/112755509-f098e200-901b-11eb-9589-cac86bb203ca.png" ></center>
 - 형태소 입력 화면 페이지
 
 <br><hr>
-<center><img src="https://user-images.githubusercontent.com/47339929/112755525-fd1d3a80-901b-11eb-9d19-15d90b414f2b.png" width="650" height="290"></center>
+<center><img src="https://user-images.githubusercontent.com/47339929/112755525-fd1d3a80-901b-11eb-9d19-15d90b414f2b.png"></center>
+<center><img src="https://user-images.githubusercontent.com/47339929/112755533-027a8500-901c-11eb-9966-a0eacde17ec6.png"></center>
+<center><img src="https://user-images.githubusercontent.com/47339929/112755541-07d7cf80-901c-11eb-93c8-d47a6936d3e8.png"></center>
 - 인터페이스 입력 및 검색결과 확인 페이지
 
 
@@ -36,10 +38,8 @@
 다시말하면, 1차문맥과 동일한 문장에서 공기한 형태소가 질의 형태소의 2차문맥이된다.<br>
 
 <hr>
-![image](https://user-images.githubusercontent.com/47339929/112755533-027a8500-901c-11eb-9966-a0eacde17ec6.png)
-![image](https://user-images.githubusercontent.com/47339929/112755541-07d7cf80-901c-11eb-93c8-d47a6936d3e8.png)
 ### 검색결과<hr>
-![image](https://user-images.githubusercontent.com/47339929/112755560-17efaf00-901c-11eb-84cc-175cd2307367.png)
+<center><img src="https://user-images.githubusercontent.com/47339929/112755560-17efaf00-901c-11eb-84cc-175cd2307367.png"></center>
 
 ### 저장결과<hr>
 ![image](https://user-images.githubusercontent.com/47339929/112755567-21791700-901c-11eb-97ad-099a43498114.png)
