@@ -115,7 +115,7 @@ sql쿼리문을 분석하던 중 테이블의 크기가 매우큰데 전체 튜�
 <br><hr>
 
 #### 방안3. 별도의 동작을 하는 각 기능들을 병렬처리 <hr>
-<center><img src="https://user-images.githubusercontent.com/47339929/112757359-83d61580-9024-11eb-8901-50934c76f0f2.png" width="800" height="350"></center>
+<center><img src="https://user-images.githubusercontent.com/47339929/112757359-83d61580-9024-11eb-8901-50934c76f0f2.png" width="650" height="290"></center>
 서로 영향을 받지않는 문화요소 후보 가중치계산 부분과 용례문장 생성 부분을 병렬처리하여 속도를 개선
 
 
