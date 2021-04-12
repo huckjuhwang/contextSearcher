@@ -59,6 +59,29 @@
 <b>추출 문맥 종류</b> : 1차 문맥은 질의 형태소와 동일한 문장에서 등장한 형태소. 2차 문맥은 1차 문맥과 동일한 문장에서 등장한 형태소. 2차 문맥 추출은 시간이 많이 걸릴 수 있으니 꼭 필요한 경우에만 실행하시길 바람.<br>
 
 
+
+#### Q. 문제 발생
+Apache Tomcat 취약점(Ghostcat) 조치
+#### A. 해결방안
+방안 1 )  버전별로 제공되는 웹페이지를 찹고하여 최신 버전으로 업데이트한다.
+방안 2 )  AJP 설정 중 secretRequired와 secret속성을 통하여 인증제한 설정.
+방안 3 )  AJP 프로토콜 포트를 차단해 버린다.
+
+본 프로젝트에서는 3번의 방식을 사용하였음.
+
+
+#### Q. 문제 발생
+JAVA에서는 DB연동이 되는데 JSP에서는 연동이 안되는 문제
+#### A. 해결방안
+같은 코드를 가지고 자바에서는 JDBC가 잘 연동이 되는데 JSP에서 연동을 할때 문제 난다면 톰켓 문제이다.
+쉽게 말하면 톰켓이 JDBC를 찾지 못하는 것이다.
+
+우선적으로 자바가 깔린 폴더를 가면 jre와 jdk가 있다.
+여기서 jdk 안에 jre가 또 있는데 톰켓의 경우에는 jdk안에 jre로 가지않고 바로 jre로 간다.
+
+jre > lib > ext 라는 폴더가 있는데 해당 디렉토리 안에다 jdbc를 넣어줘야 jsp에서 톰켓이 jdbc를 인식한다.
+
+
 ## 2020.06.12.
 
 #### 1. 숫자 값들의 경우 가운데 정렬 하지않고 대소관계가 잘 파악될수 있도록 정렬
@@ -66,6 +89,23 @@
 
 #### 2. 각 컬럼을 기준으로 오름차순 내림차순 가능하도록 구현
 
+#### Q. 문제 발생
+연구원 프로젝트를 진행하는 도중에 java 파일의 결과물의 데이터를 넘기기위해서 get 방식이 아닌 post방식을 통하여 데이터를 전송하도록 설계.
+
+post방식의 크기제한은 없다고 알고있었기 때문에 문제 없이 작동할 것 이라고 생각을 했었는데
+일정량 이상 데이터크기가 넘어가니 parameter가 넘어가지 않는 현상이 발생.
+
+#### A. 해결방안
+현상은 피라미터 개수가 설정 해놓은 개수보다 초과되었기 때문에 발생을 하게 되었습니다.
+톰캣에서 설정해 놓을 속성은! maxPostSize와 maxParameterCount입니다.
+" Tomcat은 기본적으로 Post로 넘어갈 수 있는 Parameter 최대 Size가 2097152 (2 megabytes), 최대 Parameter갯수는 10000개입니다.(Tomcat 7.0기준) "
+get방식에는 제한이있다는 사실을 알고있었는데 post방식에도 제한이 있다는 사실을 처음알게되었습니다.
+
+maxPostSize 와 maxParameterCount 속성을 변경하기위해서는
+Tomcat의 server.xml에서 Connector Tag 부분에서 변경해주시면됩니다.
+
+<Connector connectionTimeOut="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443" 
+URIEncoding="euc-kr" maxPostSize="-1" maxParameterCount="-1" />
 
 ## 2020.07.16. 
 #### 1. 테이블 검색 기능
@@ -90,12 +130,15 @@
 #### 2. 리팩토링 과정<br>
 검색기능을 하는 소스코드와 비슷한 기능을 하는 변수들의 이름을 같도록 변경
 
-#### 3. java.lang.IllegalStateException: getOutputStream() has already been called for this respons 에러 처리 <br>
-검색 결과를 저장하는 과정에서 에러가 발생하는 것을 확인
-JSP에서는 Servlet으로 변환시 내부적으로 out객체가 자동으로 생성되기 때문에 따로 out객체를 만들면 충돌이 일어나서 발생하는 이슈로 파악.
-<br>
-#### 해결방안
-outputstream을 생성하기전에 JSP자체의 out객체를 비워주고 사용하도록 하여 에러처리
+#### Q. 문제 발생
+java.lang.IllegalStateException: getOutputStream() has already been called for this respons 에러 발생
+#### A. 해결방안
+
+하지만 유지보수로 인해서 부득이 하게 해당 메소드를 사용해야 하므로 <br>
+out.clear(); //out--> jsp자체 객체
+out=pageContext.pushBody(); //out--> jsp자체 객체
+OutputStream out = response.getOutputStream();
+ outputstream을 생성하기 전에 jsp자체의 out객체를 비워주고 사용함.
 
 ## 2021.09.15.
 ### 1. 속도 개선 방안 
