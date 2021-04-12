@@ -60,6 +60,7 @@
 
 
 <hr>
+
 #### Q. 문제 발생
 Apache Tomcat 취약점(Ghostcat) 조치
 #### A. 해결방안
