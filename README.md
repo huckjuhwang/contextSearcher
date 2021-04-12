@@ -71,6 +71,7 @@ Apache Tomcat 취약점(Ghostcat) 조치
 본 프로젝트에서는 3번의 방식을 사용하였음.
 
 <hr>
+
 #### Q. 문제 발생
 JAVA에서는 DB연동이 되는데 JSP에서는 연동이 안되는 문제
 #### A. 해결방안
@@ -128,6 +129,7 @@ maxPostSize 와 maxParameterCount 속성을 변경하기위해서는 Tomcat의 s
 #### 2. 리팩토링 과정<br>
 검색기능을 하는 소스코드와 비슷한 기능을 하는 변수들의 이름을 같도록 변경
 <hr>
+
 #### Q. 문제 발생
 java.lang.IllegalStateException: getOutputStream() has already been called for this respons 에러 발생
 #### A. 해결방안
