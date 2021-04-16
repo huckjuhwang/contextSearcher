@@ -13,18 +13,6 @@
 4. 형태소간의 공기빈도 값 검색 구현<br>
 
 
-### 2021.12.05 (초기 인터페이스 구축)
-<hr>
-<center><img src="https://user-images.githubusercontent.com/47339929/112755509-f098e200-901b-11eb-9589-cac86bb203ca.png" ></center>
-- 형태소 입력 화면 페이지
-
-<br><hr>
-<center><img src="https://user-images.githubusercontent.com/47339929/112755525-fd1d3a80-901b-11eb-9d19-15d90b414f2b.png"></center>
-<center><img src="https://user-images.githubusercontent.com/47339929/112755533-027a8500-901c-11eb-9966-a0eacde17ec6.png"></center>
-<center><img src="https://user-images.githubusercontent.com/47339929/112755541-07d7cf80-901c-11eb-93c8-d47a6936d3e8.png"></center>
-- 인터페이스 입력 및 검색결과 확인 페이지
-
-
 ### 인터페이스 입력 값에 대한 간단한 설명 <br>
 <b>질의 형태소</b> : 검색 대상이 되는 기준 형태소. 예: '먹다' 주변의 문맥을 검색하려는 경우 '먹'만 입력하면 됨.<br>
 <b>질의 형태소 품사</b> : 질의 형태소의 품사. 하나만 선택.<br>
