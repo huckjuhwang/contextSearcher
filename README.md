@@ -37,14 +37,14 @@
 ### 1. 속도 개선 방안 
 <center><img src="https://user-images.githubusercontent.com/47339929/112755859-8aad5a00-901d-11eb-9fbe-513a8c0ac86b.png" width="650" height="290"></center>
 
-- 각 동작방식에 대해서 시간을 분석 
-- 이후 가장 시간이 많이 소요되는 부분 대해서 소스코드 분석을 통한 속도 개선 <hr>
+- 각 프로젝트 모듈마다 검색 시간을 분석하였습니다. 
+- 이후 가장 시간이 많이 소요되는 부분 부터 속도 개선을 진행 하였습니다. <hr>
 
 #### 속도 개선 방안 1. 수 많은 동작을하는 부분을 나눠서 멀티쓰레드 사용<br><hr>
 <center><img src="https://user-images.githubusercontent.com/47339929/112757312-3d80b680-9024-11eb-80bd-45afc7743825.png" width="650" height="290"></center>
 
-- 형태소 관련 데이터를 추출하는 과정에서 한개의 요소 당 대략 <b>0.005초</b>가 소요
-- 만약 추출해야되는 문화요소 개수가 2000개 라고 한다면 추출하는데에서 걸리는 시간만 <b> 15초이상</b>의 시간을 잡아먹는 상황인것을 파악
+- 형태소 관련 데이터를 추출하는 과정에서 한개의 요소 당 대략 <b>0.005초</b>가 소요.
+- 만약 추출해야되는 문화요소 개수가 2000개 라고 한다면 추출하는데에서 걸리는 시간만 <b> 15초이상</b>의 시간을 잡아먹는 상황인것을 파악.
 - 멀티쓰레드를 사용하여 500개 단위 당 Thread 1개를 생성하여 같은 작업을 처리 시스템 속도를 향상.( Thread MAX 개수 지정 ) <hr>
 
 
@@ -77,60 +77,3 @@
 <center><img src="https://user-images.githubusercontent.com/47339929/112799015-c0e3eb80-90a8-11eb-8311-7578be55d011.png" width="650" height="290"></center>
 <center><img src="https://user-images.githubusercontent.com/47339929/112799045-c93c2680-90a8-11eb-8918-541793067cb4.png" width="650" height="290"></center>
 <hr><br>
-
-#### Q. 문제 발생
-Apache Tomcat 취약점(Ghostcat) 조치
-#### A. 해결방안
-방안 1 )  버전별로 제공되는 웹페이지를 찹고하여 최신 버전으로 업데이트한다.<br>
-방안 2 )  AJP 설정 중 secretRequired와 secret속성을 통하여 인증제한 설정.<br>
-방안 3 )  AJP 프로토콜 포트를 차단해 버린다.<br>
-<br>
-본 프로젝트에서는 3번의 방식을 사용하였음.
-
-<hr>
-
-#### Q. 문제 발생
-JAVA에서는 DB연동이 되는데 JSP에서는 연동이 안되는 문제
-#### A. 해결방안
-같은 코드를 가지고 자바에서는 JDBC가 잘 연동이 되는데 JSP에서 연동을 할때 문제 난다면 톰켓 문제이다.
-쉽게 말하면 톰켓이 JDBC를 찾지 못하는 것이다.
-
-우선적으로 자바가 깔린 폴더를 가면 jre와 jdk가 있다.
-여기서 jdk 안에 jre가 또 있는데 톰켓의 경우에는 jdk안에 jre로 가지않고 바로 jre로 간다.
-
-jre > lib > ext 라는 폴더가 있는데 해당 디렉토리 안에다 jdbc를 넣어줘야 jsp에서 톰켓이 jdbc를 인식한다.
-
-
-#### Q. 문제 발생
-연구원 프로젝트를 진행하는 도중에 java 파일의 결과물의 데이터를 넘기기위해서 get 방식이 아닌 post방식을 통하여 데이터를 전송하도록 설계.
-
-post방식의 크기제한은 없다고 알고있었기 때문에 문제 없이 작동할 것 이라고 생각을 했었는데
-일정량 이상 데이터크기가 넘어가니 parameter가 넘어가지 않는 현상이 발생.
-
-#### A. 해결방안
-현상은 피라미터 개수가 설정 해놓은 개수보다 초과되었기 때문에 발생을 하게 되었습니다.<br>
-톰캣에서 설정해 놓을 속성은! maxPostSize와 maxParameterCount입니다.<br>
-" Tomcat은 기본적으로 Post로 넘어갈 수 있는 Parameter 최대 Size가 2097152 (2 megabytes), 최대 Parameter갯수는 10000개입니다.(Tomcat 7.0기준) "<br>
-get방식에는 제한이있다는 사실을 알고있었는데 post방식에도 제한이 있다는 사실을 처음알게되었습니다.<br><br>
-
-maxPostSize 와 maxParameterCount 속성을 변경하기위해서는 Tomcat의 server.xml에서 Connector Tag 부분에서 변경.<br>
-
-
-
-#### 4. 프로젝트 문서화
-- 작성내용 
-서버계정, 접속방법, 입력 인터페이스 설명, 웹페이지 관계도, 파일설명, 오류 발생부분 및 해결방안.
-
-
-#### Q. 문제 발생
-java.lang.IllegalStateException: getOutputStream() has already been called for this respons 에러 발생
-#### A. 해결방안
-
-하지만 유지보수로 인해서 부득이 하게 해당 메소드를 사용해야 하므로 <br>
-out.clear(); //out--> jsp자체 객체
-out=pageContext.pushBody(); //out--> jsp자체 객체
-OutputStream out = response.getOutputStream();
- outputstream을 생성하기 전에 jsp자체의 out객체를 비워주고 사용함.
-
-## 2021.09.15.
-
