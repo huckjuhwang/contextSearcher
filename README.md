@@ -31,9 +31,21 @@
 
 
 <br><br><br><br>
-![image](https://user-images.githubusercontent.com/47339929/119082172-7e031c00-ba38-11eb-931d-45992759c886.png)
+
+
+![image](https://user-images.githubusercontent.com/47339929/119082172-7e031c00-ba38-11eb-931d-45992759c886.png
+https://user-images.githubusercontent.com/47339929/119083512-0aaed980-ba3b-11eb-9b87-4aa4265b07d4.mp4
+
+)
 ![image](https://user-images.githubusercontent.com/47339929/119082208-907d5580-ba38-11eb-9b27-eeaabefcd4aa.png)
 ![image](https://user-images.githubusercontent.com/47339929/119082232-9d01ae00-ba38-11eb-9718-c0862d5cdb94.png)
+
+
+검색 결과
+
+![image](https://user-images.githubusercontent.com/47339929/119082339-cfaba680-ba38-11eb-8cf3-292c424ed2c2.png)
+
+
 
 ## 검색 속도개선을 위한 구조 분석
 ### 1. 속도 개선 방안 
