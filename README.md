@@ -31,6 +31,9 @@
 
 
 <br><br><br><br>
+![image](https://user-images.githubusercontent.com/47339929/119082172-7e031c00-ba38-11eb-931d-45992759c886.png)
+![image](https://user-images.githubusercontent.com/47339929/119082208-907d5580-ba38-11eb-9b27-eeaabefcd4aa.png)
+![image](https://user-images.githubusercontent.com/47339929/119082232-9d01ae00-ba38-11eb-9718-c0862d5cdb94.png)
 
 ## 검색 속도개선을 위한 구조 분석
 ### 1. 속도 개선 방안 
