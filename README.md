@@ -28,9 +28,11 @@
 - JSP
 - MYSQL
 
-## 개발 포인트
+## 본 프로젝트에서 기여한 점
 [1. 검색 속도개선을 위한 구조 분석](#검색-속도개선을-위한-구조-분석)<br>
 [2. 속도개선 결과 ](#속도개선-전과-이후-비교)
+[Tomcat] Apache Tomcat 취약점(Ghostcat) 조치방안(https://blog.naver.com/skygurwn96/221885327776)
+[DataBase] 대용량 데이터(파일) DB Insert 시키기(https://blog.naver.com/skygurwn96/222294234818)
 
 
 <br><br><br><br>
