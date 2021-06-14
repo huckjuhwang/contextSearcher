@@ -4,7 +4,8 @@
 ## 연구원 프로젝트
 프로젝트 시작 부터 배포되기 까지 모든과정을 겪어보고, 데이터 개수가 1000만개가 넘는 테이블을 관리, 검색, 생성하여 성과를 냈던 프로젝트 입니다. <br>
 현재 이 프로젝트는 일부 언어학자 분들을 대상으로 운영되고 유지보수  있습니다.<br>
-보안상 간략하게 내용을 담았습니다.<br>
+보안상 소스코드는 포함하지 않았습니다.
+<br>
 
 - 프로젝트 명 : 문화요소 추출 시스템
 - 개발기간 : 2020.04.01 ~ 2021.05.30
@@ -34,23 +35,21 @@
 
 
 
-https://user-images.githubusercontent.com/47339929/119083535-18fcf580-ba3b-11eb-91bf-743dab392635.mp4
-
 
 <br><br><br><br>
 
 
-
-
-
-
-
-
-
-검색 결과
+### 검색 결과
 
 ![image](https://user-images.githubusercontent.com/47339929/119082339-cfaba680-ba38-11eb-8cf3-292c424ed2c2.png)
 
+
+### 저장 결과
+- 빈도수 상위 랭킹 N개 * N개 사이의 공기빈도 출력
+![image](https://user-images.githubusercontent.com/47339929/121847056-f3ee6080-cd22-11eb-904d-d24d654cd87d.png)
+
+- 입력한 형태소와 같이 등장한 다른 형태소 와의 공기빈도 출력
+![image](https://user-images.githubusercontent.com/47339929/121847104-05376d00-cd23-11eb-8fc3-482a5f3a7595.png)
 
 
 
