@@ -51,6 +51,11 @@
 - 입력한 형태소와 같이 등장한 다른 형태소 와의 공기빈도 출력
 ![image](https://user-images.githubusercontent.com/47339929/121847104-05376d00-cd23-11eb-8fc3-482a5f3a7595.png)
 
+- 입력한 형태소와 어떤 형태소와 같이 등장하는지와 용례문장 데이터 출력
+
+
+![image](https://user-images.githubusercontent.com/47339929/121847458-8ee73a80-cd23-11eb-834b-2f67119ef845.png)
+
 
 
 ## 검색 속도개선을 위한 구조 분석
